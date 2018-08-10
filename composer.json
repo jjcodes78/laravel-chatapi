@@ -12,5 +12,30 @@
             "name": "Jorge Gonçalves Junior",
             "email": "jorge.techinfo@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "classmap": [],
+        "psr-4": {
+            "ChatApi\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": [
+            ],
+            "providers": [
+                "ChatApi\\ChatApiServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    }
 }

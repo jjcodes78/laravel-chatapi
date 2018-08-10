@@ -34,6 +34,8 @@ class ChatApi
 
         $response = $this->client->request('POST', $this->endPoint . '/message', $data);
 
+        return $response->getBody()->getContents();
+
     }
 
     public function setWebhook($url)
@@ -49,21 +51,21 @@ class ChatApi
     {
         $response = $this->client->request('GET', $this->endPoint . '/webhook');
 
-        return json_encode($response->getBody()->getContents());
+        return $response->getBody()->getContents();
     }
 
     public function logout()
     {
         $response = $this->client->request('GET', $this->endPoint . '/logout');
 
-        return json_encode($response->getBody()->getContents());
+        return $response->getBody()->getContents();
     }
 
     public function reboot()
     {
         $response = $this->client->request('GET', $this->endPoint . '/reboot');
 
-        return json_encode($response->getBody()->getContents());
+        return $response->getBody()->getContents();
     }
 
     /**
@@ -78,7 +80,7 @@ class ChatApi
 
         $response = $this->client->request('GET', $this->endPoint . '/messages' . $query);
 
-        return json_encode($response->getBody()->getContents());
+        return $response->getBody()->getContents();
     }
 
     protected function buildFormRequest(array $body)

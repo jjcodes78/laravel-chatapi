@@ -1,0 +1,16 @@
+{
+    "name": "jjsquady/laravel-chatapi",
+    "description": "Laravel Wrapper for Chat-Api for WhatApp messaging.",
+    "type": "project",
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "illuminate/support": "^5.6"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jorge Gonçalves Junior",
+            "email": "jorge.techinfo@gmail.com"
+        }
+    ]
+}
